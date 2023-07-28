@@ -1,13 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Open+Sans:wght@400;700&display=swap');
 
+@font-face {
+    font-family: Neue Machina;
+    src: url('../fonts/neue-machina-regular.otf')
+}
+
 * {
     box-sizing: border-box;
     font-family: "Open Sans", sans-serif;
 }
 
-body{
+body {
     background-color: black;
-    color:azure;
+    color: azure;
 }
 
 ul {
@@ -21,4 +26,36 @@ li {
 
 .main {
     padding: 1rem;
+    margin: 1rem;
+    border: 1px solid white;
+    border-radius: 1rem;
+}
+
+.main::before {
+    content: '';
+    background-image: url('/assets/img/background/bg-top.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+    position: fixed;
+    width: 140vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.main::after {
+    content: '';
+    background-image: url('/assets/img/background/bg-top.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+    position: fixed;
+    width: 140vw;
+    height: 100vh;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    transform: rotate(180deg);
 }

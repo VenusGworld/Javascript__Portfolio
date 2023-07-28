@@ -15,8 +15,8 @@
 }
 
 .about-me-img {
-    width: 7rem;
-    height: 7rem;
+    width: 10rem;
+    height: 10rem;
     margin: auto;
 }
 
@@ -34,13 +34,42 @@
 .about-me-text>ul {
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
 }
 
 .about-me-text>ul>li {
-    padding-bottom: .7rem;
-    font-size: .9rem;
-    margin: auto;
+    margin: .5rem;
+    font-size: .8rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+.about-me-text>ul>li::before {
+    content: '';
+    display: inline-block;
+    width: 1.1rem;
+    height: 1.1rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: .5rem;
+}
+
+ul>.person::before {
+    background-image: url('/assets/img/icons/person.svg');
+}
+
+ul>.location::before {
+    background-image: url('/assets/img/icons/location.svg');
+}
+
+ul>.watts::before {
+    background-image: url('/assets/img/icons/whatts.svg');
+}
+
+ul>.email::before {
+    background-image: url('/assets/img/icons/email.svg');
 }
 
 /* *{
